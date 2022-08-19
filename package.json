@@ -1,0 +1,48 @@
+{
+  "name": "docker-login",
+  "description": "GitHub Action to login against a Docker registry",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc && ncc build",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "test": "jest --coverage",
+    "pre-checkin": "yarn run format && yarn run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/docker/login-action.git"
+  },
+  "keywords": [
+    "actions",
+    "docker",
+    "login"
+  ],
+  "author": "Docker",
+  "contributors": [
+    {
+      "name": "CrazyMax",
+      "url": "https://crazymax.dev"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/io": "^1.1.2",
+    "semver": "^7.3.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^14.17.4",
+    "@vercel/ncc": "^0.28.6",
+    "dotenv": "^8.6.0",
+    "jest": "^26.6.3",
+    "jest-circus": "^26.6.3",
+    "jest-runtime": "^26.6.3",
+    "prettier": "^2.3.2",
+    "ts-jest": "^26.5.6",
+    "typescript": "^3.9.10",
+    "typescript-formatter": "^7.2.2"
+  }
+}
